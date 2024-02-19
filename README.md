@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Synonym Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that uses the Datamuse API to find synonyms for a given word.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch synonyms for a given word
+- Click on a synonym to fetch synonyms for that word
+- Display a loading spinner while fetching data
+- Display a message when no synonyms are found
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository
+2. Install the dependencies with `npm install`
+3. Start the development server with `npm start`
+4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser
 
-- Configure the top-level `parserOptions` property like this:
+## Project Structure
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- `App.tsx`: This is the main component of the application. It handles the form submission, fetches the synonyms, and manages the state.
+- `fetchSynonyms.ts`: This module exports the `fetchSynonyms` function, which is used to fetch synonyms from the Datamuse API.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Future Improvements
+
+- Add error handling for the fetch operation
+- Improve the UI/UX
+- Add more features, like antonyms, rhymes, etc.
